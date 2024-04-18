@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1712366475 source:c:\users\humgr\onedrive\documentos\codeblocks\ed1_trabalho\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

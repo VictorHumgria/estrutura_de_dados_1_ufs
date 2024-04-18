@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1701559065 source:c:\users\humgr\onedrive\documentos\codeblocks\ed1_quicksort\main.cpp
+	<iostream>
+	<vector>
+

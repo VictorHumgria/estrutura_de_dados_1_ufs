@@ -1,0 +1,54 @@
+int insercOrd(tipoLista *listaEnc, int posicao, int valor)
+{
+    if(!listaEnc)         return 0;
+    if(listaEnc->quant<posicao) 
+        return 0;
+    int contador = 0;
+
+    tipoNo *atual = listaEnc->inicio; 
+    tipoNo *novoNo = (tipoNo*) malloc(sizeof(tipoNo));  
+
+    if(novoNo == NULL) 
+        return 0;
+    novoNo ->dado = valor; 
+    novoNo ->proxNo = NULL; 
+
+    for(int i=1; i<posicao-1; i++) 
+        atual = atual->proxNo; 
+
+    novoNo ->proxNo = atual->proxNo; 
+    atual->proxNo = novoNo; 
+    listaEnc->quant++;
+    return 1;
+
+}
+int removeNoPosicaoOrd(tipoLista *listaEnc, int posicao)
+{
+    if(!listaEnc) 
+        return 0;
+    if(posicao < 1 || posicao > listaEnc->quant) 
+        return 0;
+
+    tipoNo *atual = listaEnc->inicio;
+    tipoNo *anterior = NULL;
+
+    // Percorre a lista encadeada até a posição desejada
+    for(int i=1; i<posicao; i++)
+    {
+        anterior = atual;
+        atual = atual->proxNo;
+    }
+
+    if(anterior == NULL)
+    {
+        listaEnc->inicio = atual->proxNo;
+    }
+    else
+    {
+        anterior->proxNo = atual->proxNo;
+    }
+
+    free(atual);
+    listaEnc->quant--;
+    return 1;
+}

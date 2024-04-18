@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1710037746 source:c:\users\humgr\onedrive\documentos\codeblocks\arvore-binaria\main.c
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+

@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1708729470 source:c:\users\humgr\onedrive\documentos\codeblocks\mult-list-exe\main.c
+	<stdio.h>
+	<stdlib.h>
+
